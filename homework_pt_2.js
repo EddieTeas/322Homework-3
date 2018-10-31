@@ -10,15 +10,23 @@ function start()
 }
 
 function sumAll( inAr ){
-	var total = 0,
+	var colArray = new(Array(inAr.length)),
+	col,
 	i,
-	j;
-	for( i = 0; i < inAr.length; i++){
-		for( j=0; j< inAr[i].length; j++){
-			total = total +inAr[i][j];
+	sum = 0,
+	j = 0;
+
+	for ( i = 0; i < inAr[i][j].length; j++) {
+		//sets up the array to go through
+		col = 0;
+		for(col;  col<inAr.length; i++){
+			//goes down the column to get the avg
+			col++;
+			sum = sum +inAr[i][j];
 		}
+		colArray[j] = sum/col;
 	}
-	return total;
+	return colArray;
 }
 
 function rowAVG(inAr){
